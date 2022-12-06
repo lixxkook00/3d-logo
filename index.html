@@ -9,6 +9,10 @@
 
     <link rel="stylesheet" href="./style.css">
 
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
     <!-- model viewer -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
@@ -17,17 +21,21 @@
 <body>
     <section class="intro">
         <div class="logo-wrapper">
-            <model-viewer id="logo" touch-action="none" interpolation-decay="1" interaction-prompt="none"
-                src="./assets/logo.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-                poster="poster.webp" disable-zoom shadow-intensity="1.71" exposure="0.85" shadow-softness="0.59"
-                camera-controls camera-target="4m 4m 0m" auto-rotate rotation-per-second="40deg">
+            <model-viewer id="logo" touch-action="none" interpolation-decay="200" interaction-prompt="none"
+                src="./assets/logo.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-orbit="180deg 90deg 40m"
+                camera-controls poster="poster.webp" disable-zoom shadow-intensity="1.71" exposure="0.85"
+                shadow-softness="0.59" camera-controls camera-target="4m 4m 0m" auto-rotate rotation-per-second="40deg"
+                loading="eager">
                 <div class="progress-bar hide" slot="progress-bar">
                     <div class="update-bar"></div>
                 </div>
-                <button slot="ar-button" id="ar-button">
-                    View in your space
-                </button>
+
             </model-viewer>
+
+            <div class="name text-center">
+                <h1 class="chrome">NAGECCO</h1>
+            </div>
+
         </div>
     </section>
 

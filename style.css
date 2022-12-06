@@ -10,13 +10,26 @@ html,body{
     background: url(./assets/bg.png) center center no-repeat;
     background-size: 100% 100%;
     position: relative;
+
+    overflow-x: hidden;
 }
 
 .logo-wrapper{
     position: absolute;
-    top: 47%;
+    top: 64%;
     left: 50%;
     transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+}
+
+.name{
+    display: flex;
+    align-items: center;
+    transform: scale(0.27) translateY(-180%);
 }
 
 model-viewer {
@@ -25,6 +38,53 @@ model-viewer {
   transition: all 0.3s linear;
 }
 
+.chrome {
+    position: relative;
+    background-image: linear-gradient(90deg, #3779BC 0%, #8EA9DE 48%, #3779BC 100%);
+   
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* -webkit-text-stroke: 4px #f5f5f5; */
+    -webkit-box-reflect: below -10px
+    linear-gradient(to bottom, transparent, rgb(165 233 212 / 37%));
+
+    font-size: 200px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    line-height: 1;
+}
+
+.chrome:before {
+    content: 'NAGECCO';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background-image: -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
+    background-position: -680px 0;
+    text-shadow: 3px -3px #12325a56;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 0;
+    padding-right: 500px;
+    -webkit-animation-name: chrome_effect;
+    -webkit-animation-duration: 6s;
+    /* -webkit-animation-delay: 1s; */
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes chrome_effect {
+    0% {
+        background-position: -680px 0;
+    }
+    10% {
+        background-position: 420px 0;
+    }
+    100% {
+        background-position: 480px 0;
+    }
+}
 
 /* Mobile & Tablet */
 @media (max-width: 1023px) {
@@ -33,7 +93,7 @@ model-viewer {
     }
 
     model-viewer {
-        width: 60vw;
-        height: 30vh;
+        width: 80vw;
+        height: 38vh;
     }
 }
