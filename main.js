@@ -7,13 +7,24 @@ modelViewerTexture.addEventListener("load", () => {
     // material.pbrMetallicRoughness.setBaseColorFactor("../assest/do.png");
 
     const createTexture = async () => {
-        const texture = await modelViewerTexture.createTexture("./assets/do.png");    
-        const texture2 = await modelViewerTexture.createTexture("./assets/xanh.png");  
+        const textureRed = await modelViewerTexture.createTexture("./assets/do.png");    
+        const textureRed2 = await modelViewerTexture.createTexture("./assets/red.jpg");
+
+        const textureBlue = await modelViewerTexture.createTexture("./assets/xanh.png");  
+        const textureBlue2 = await modelViewerTexture.createTexture("./assets/blue.jpg");  
         
-        console.log(modelViewerTexture.availableVariants)
+        console.log(material2.pbrMetallicRoughness["baseColorTexture"])
         
-        material.pbrMetallicRoughness["baseColorTexture"].setTexture(texture);
-        material2.pbrMetallicRoughness["baseColorTexture"].setTexture(texture2);
+        // set texture for RED part :
+        material.pbrMetallicRoughness["baseColorTexture"].setTexture(textureRed);
+        material.pbrMetallicRoughness.metallicRoughnessTexture.setTexture(textureRed2);
+        material.occlusionTexture.setTexture(textureRed2);
+
+        // set texture for BLUE part :
+        material2.pbrMetallicRoughness["baseColorTexture"].setTexture(textureBlue2);
+        material2.pbrMetallicRoughness.setBaseColorFactor("#3da1ff");
+        material2.pbrMetallicRoughness.metallicRoughnessTexture.setTexture(textureBlue2);
+        // material2.occlusionTexture.setTexture(textureRed);
     }
 
     createTexture()
