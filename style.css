@@ -30,7 +30,7 @@ html,body{
     display: flex;
     align-items: center;
     position: relative;
-    transform: scale(0.23) translateY(-280%);
+    transform: scale(0.2) translateY(-280%);
 }
 
 model-viewer {
