@@ -85,6 +85,15 @@ model-viewer {
     }
 }
 
+.text-3d{
+    text-shadow: 0 0px 0px rgb(0 0 0 / 40%), 9px -10px 2px #314d74;
+    font-size: 200px;
+    font-family: 'Montserrat', sans-serif;
+    /* transform: scale(0.23); */
+    position: absolute;
+    z-index: -1;
+}
+
 
 /* Tablet Only */
 
@@ -115,11 +124,13 @@ model-viewer {
 
 }
 
-.text-3d{
-    text-shadow: 0 0px 0px rgb(0 0 0 / 40%), 9px -10px 2px #314d74;
-    font-size: 200px;
-    font-family: 'Montserrat', sans-serif;
-    /* transform: scale(0.23); */
-    position: absolute;
-    z-index: -1;
+/*  Motherfucking Iphone 5S */
+@media (max-width: 375px) {
+    .name {
+        transform: scale(0.16) translateY(-350%) !important;
+    }
+
+    .logo-wrapper{
+        top: 67%;
+    }
 }
