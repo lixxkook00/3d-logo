@@ -16,7 +16,7 @@ html,body{
 
 .logo-wrapper{
     position: absolute;
-    top: 62%;
+    top: 48%;
     left: 50%;
     transform: translate(-50%,-50%);
     display: flex;
@@ -29,8 +29,11 @@ html,body{
 .name{
     display: flex;
     align-items: center;
-    position: relative;
-    transform: scale(0.239) translateY(-280%);
+    transform: scale(0.26178) translate(-47%,100px);
+
+    position: absolute;
+    bottom: -10%;
+    left: -50%;
 }
 
 model-viewer {
@@ -103,7 +106,7 @@ model-viewer {
     }
 
     .name {
-        transform: scale(0.245) translateY(-47vh) !important
+        /* transform: scale(0.245) translateY(-47vh) !important */
     }
 }
 
@@ -113,13 +116,13 @@ model-viewer {
         background-size: auto 100%;
     }
 
-    model-viewer {
+    /* model-viewer {
         width: 80vw;
         height: 38vh;
-    }
+    } */
 
     .name{
-        transform: scale(0.2) translateY(-300%);
+        /* transform: scale(0.213) translateY(-300%); */
     }
 
 }
@@ -127,10 +130,10 @@ model-viewer {
 /*  Motherfucking Iphone 5S */
 @media (max-width: 375px) {
     .name {
-        transform: scale(0.16) translateY(-350%) !important;
+        /* transform: scale(0.17) translateY(-365%) !important; */
     }
 
     .logo-wrapper{
-        top: 67%;
+        top: 45%;
     }
 }
