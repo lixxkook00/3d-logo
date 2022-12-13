@@ -38,14 +38,14 @@ modelViewerTexture2.addEventListener("load", () => {
     // material.pbrMetallicRoughness.setBaseColorFactor("../assest/do.png");
 
     const createTexture = async () => {
-        const textureRed = await modelViewerTexture2.createTexture("./assets/do.png");  
-        const textureBlue = await modelViewerTexture2.createTexture("./assets/xanh.png");    
+        // const textureRed = await modelViewerTexture2.createTexture("./assets/do.png");  
+        // const textureBlue = await modelViewerTexture2.createTexture("./assets/xanh.png");    
         
-        // set texture for RED part :
-        material.pbrMetallicRoughness["baseColorTexture"].setTexture(textureRed);
+        // // set texture for RED part :
+        material.pbrMetallicRoughness.setBaseColorFactor("#F90200");
 
-        // set texture for BLUE part :
-        material2.pbrMetallicRoughness["baseColorTexture"].setTexture(textureBlue);
+        // // set texture for BLUE part :
+        material2.pbrMetallicRoughness.setBaseColorFactor("#1D45FC");
     }
 
     createTexture()
