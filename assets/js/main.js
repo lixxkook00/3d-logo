@@ -21,7 +21,7 @@ const SLOGAN_ELEMENT = document.querySelector("#slogan");
 
 const setWidthSlogan = () => {
     let finalScaleRate = ((LOGO_WIDTH * 0.72)/1069.6)
-    console.log("finalScaleRate",finalScaleRate)
+    // console.log("finalScaleRate",finalScaleRate)
     SLOGAN_ELEMENT.style.transform = `scale(${finalScaleRate}) translate(-46%,100px)`
 }
 
